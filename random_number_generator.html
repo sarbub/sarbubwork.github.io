@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      body{
+            margin:0;
+            padding:0;
+            background-color: rgb(225, 221, 221);
+        }
+        .upper_div{
+            display:flex;
+            background-color:#fff;
+        }
+        #upperFirepage{
+            background-color:#fff;
+            color:blue;
+            font-size:30px;
+            font-family:sans-serif;
+            margin-left:30px;
+        }
+</style>
+<body>
+    <div class="upper_div">
+        <p id="upperFirepage">FirePage</p>
+    </div>
+    <p id="p"></p>
+    <button onclick="add_random_numbers(numbers)">random number</button>
+    
+</body>
+<script>
+    let numbers = [];
+    function add_random_numbers(array){
+        for(let i = 0;i<10;i++){
+            let random = Math.ceil(Math.random() * 9);
+            array.push(random);
+        }
+        console.log(array);
+        let p = document.getElementById("p").innerHTML = numbers;
+        p = "";
+
+    }
+    
+    
+    
+</script>
+</html>
